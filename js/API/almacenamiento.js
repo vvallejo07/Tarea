@@ -25,9 +25,10 @@ function leerTareas(){
 			for(i=0;i<largo;i++){
 				if(!ban){
 						table += '<ul class="incomplete">';
+						ban=true;
 				}
 				table += '<li itemId='+res.rows.item(i).id+'><input type="checkbox" class="incompleteDB" /> <span>'+res.rows.item(i).nombre+'</span> <small><a href="#">Blah</a></small></li>';
-                ban=true;	
+                x	
 			}
 			if(ban)
 			    table += '</ul>';
@@ -44,10 +45,11 @@ function leerTareas(){
 			
 			for(i=0;i<largo;i++){
 				if(!ban){
-						table += '<h4>Completed</h4><ul class="completeDB">';
+						table += '<h4>Completed</h4><ul class="complete" >';
+						 ban=true;
 				}
-				table += '<li itemId='+res.rows.item(i).id+'><input type="checkbox" checked /> <span>'+res.rows.item(i).nombre+'</span></li>';
-                ban=true;	
+				table += '<li itemId='+res.rows.item(i).id+'><input type="checkbox" checked class="completeDB" /> <span>'+res.rows.item(i).nombre+'</span></li>';
+               	
 			}
 			if(ban)
 			    table += '</ul>';
