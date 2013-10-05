@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
-	leerTareas();
+	
 	
 	document.addEventListener("deviceready",function(){
         /*if(!usuarioExiste())
@@ -23,17 +23,6 @@ $(document).ready(function(){
         
         //Crear Reservas
      
-        $('.incompleteDB').tap(function(){
-         	var id=$(this).attr('itemId');
-			updateStatus(id,"t");
-			leerTareas();
-        });
-		
-        $('.completeDB').tap(function(){
-         	var id=$(this).attr('itemId');
-			updateStatus(id,"f");
-			leerTareas();
-        });
 
 		
 		
