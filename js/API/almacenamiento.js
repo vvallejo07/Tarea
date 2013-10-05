@@ -19,7 +19,7 @@ function leerTareas(){
 	accesoBD().transaction(function(tx){
 		tx.executeSql('SELECT * FROM tareas where estatus = "f"',[],function(tx2,res){
 			var largo = res.rows.length;
-			var table = '<div class="toolbar"><h1>Todos</h1><a href="#add" class="btn2 slideup">Add</a></div>';
+			var table = '';
 			var ban = false;
 			
 			for(i=0;i<largo;i++){
