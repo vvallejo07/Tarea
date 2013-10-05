@@ -12,7 +12,7 @@ function leerTareas(){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS tareas (id unique,nombre,estatus)');
 		
 	},function(err){
-		alert("Error: "+err.code);	
+		alert("Error1: "+err.code);	
 	},function(){
 	});
 	
@@ -36,7 +36,7 @@ function leerTareas(){
 			
 			
 		},function(err){
-			alert('Error: '+err.code);	
+			alert('Error2: '+err.code);	
 		});
 		
 		tx.executeSql('SELECT * FROM tareas where estatus = "t"',[],function(tx2,res){
@@ -57,12 +57,12 @@ function leerTareas(){
 			
 			
 		},function(err){
-			alert('Error: '+err.code);	
+			alert('Error3: '+err.code);	
 		});
 		
 		
 	},function(err){
-		alert('Error: '+err.code);	
+		alert('Error4: '+err.code);	
 	},function(){
 		$('#home').html(table);
 	});
@@ -73,7 +73,7 @@ function updateStatus(id,estatus){
 		tx.executeSql('UPDATE tareas  set (estatus='+estatus+') where id='+id+'');
 		
 	},function(err){
-		alert("Error: "+err.code);	
+		alert("Error5: "+err.code);	
 	},function(){
 	});
 }
@@ -83,7 +83,7 @@ function addItem(nombre){
 		tx.executeSql('INSERT INTO tareas (nombre,estatus) VALUES ("'+nombre+'","f")');
 		
 	},function(err){
-		alert("Error: "+err.code);	
+		alert("Error6: "+err.code);	
 	},function(){
 	});
 }
