@@ -79,8 +79,15 @@
 
         <script type="text/javascript" charset="utf-8">
 		
-		Zepto(function($){
-		leerTareas();
+		
+            var jQT = $.jQTouch({
+                icon: 'icon.png',
+                startupScreen: 'startup.png'
+				
+            });
+            // Some sample Javascript functions:
+            $(function(){
+				leerTareas();
         $('.incompleteDB').tap(function(){
          	var id=$(this).attr('itemId');
 			updateStatus(id,"t");
@@ -92,14 +99,6 @@
 			updateStatus(id,"f");
 			leerTareas();
         });
-		});
-            var jQT = $.jQTouch({
-                icon: 'icon.png',
-                startupScreen: 'startup.png'
-				
-            });
-            // Some sample Javascript functions:
-            $(function(){
                 function submitForm(){
                     $el = $('#add form');
                     if ($('#todo', $el).val().length > 1) {
